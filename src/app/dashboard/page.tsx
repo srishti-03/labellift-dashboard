@@ -4,6 +4,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 // We'll define a type for our track object for TypeScript
 type Track = {
   id: number;
@@ -15,12 +16,18 @@ type Track = {
 
 export default function DashboardPage() {
   // State to store the list of tracks
+  const router = useRouter();
   const [tracks, setTracks] = useState<Track[]>([]);
   // State to handle loading state
   const [isLoading, setIsLoading] = useState(true);
 
   // useEffect hook to fetch data when the component mounts
   useEffect(() => {
+    const loggedIn = localStorage.getItem('isLoggedIn');
+    if (!loggedIn) {
+      router.push('/'); // If not logged in, redirect to login page
+      return; // Stop running the rest of the effect
+    }
     const fetchTracks = async () => {
       try {
         const response = await fetch('/api/tracks');
@@ -34,7 +41,7 @@ export default function DashboardPage() {
     };
 
     fetchTracks();
-  }, []); // The empty array [] means this effect runs only once after the initial render
+  }, [router]); // The empty array [] means this effect runs only once after the initial render
 
   if (isLoading) {
     return <div className="text-center p-10">Loading tracks...</div>;
