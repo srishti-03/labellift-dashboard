@@ -20,6 +20,7 @@ export default function DashboardPage() {
   const [tracks, setTracks] = useState<Track[]>([]);
   // State to handle loading state
   const [isLoading, setIsLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
 
   // useEffect hook to fetch data when the component mounts
   useEffect(() => {
@@ -46,15 +47,27 @@ export default function DashboardPage() {
   if (isLoading) {
     return <div className="text-center p-10">Loading tracks...</div>;
   }
-
+  const filteredTracks = tracks.filter(track =>
+  track.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  track.artist.toLowerCase().includes(searchQuery.toLowerCase())
+  );
   return (
     <main className="container mx-auto p-4 sm:p-6 md:p-8">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl sm:text-3xl font-bold">Music Dashboard</h1>
-        <Link href="/upload" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Upload Track
-        </Link>
-      </div>
+      <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+  <h1 className="text-2xl sm:text-3xl font-bold">Music Dashboard</h1>
+  <div className="flex items-center gap-4">
+    <input
+      type="text"
+      placeholder="Search by title or artist..."
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+      className="shadow appearance-none border rounded py-2 px-3 text-gray-700 dark:text-gray-200 dark:bg-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+    />
+    <Link href="/upload" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded whitespace-nowrap">
+      Upload Track
+    </Link>
+  </div>
+</div>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
           <thead className="bg-gray-100 dark:bg-gray-700">
@@ -66,7 +79,7 @@ export default function DashboardPage() {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200 dark:divide-gray-600">
-  {tracks.map((track) => (
+  {filteredTracks.map((track) => (
     <tr key={track.id} className="hover:bg-gray-50 dark:hover:bg-gray-700">
       
       {/* CORRECTED TITLE CELL */}
