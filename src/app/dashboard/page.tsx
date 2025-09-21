@@ -42,7 +42,12 @@ export default function DashboardPage() {
 
   return (
     <main className="container mx-auto p-4 sm:p-6 md:p-8">
-      <h1 className="text-2xl sm:text-3xl font-bold mb-6">Music Dashboard</h1>
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-2xl sm:text-3xl font-bold">Music Dashboard</h1>
+        <Link href="/upload" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Upload Track
+        </Link>
+      </div>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
           <thead className="bg-gray-100 dark:bg-gray-700">
