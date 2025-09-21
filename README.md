@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LabelLift Music Dashboard 🎵
 
-## Getting Started
+This is a mini music distribution dashboard built as a frontend assessment. The project is a Next.js application that allows users to view, upload, and see details for music tracks, all powered by a mock API.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features Completed ✅
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [cite_start]**Mock Authentication**: A simple, client-side login page to grant access to the dashboard. [cite: 10]
+- [cite_start]**Dashboard Track List**: Displays a list of all music tracks in a clean, responsive table format. [cite: 11]
+- [cite_start]**Dynamic Track Details**: Clicking a track takes the user to a unique page (`/track/[id]`) showing its specific details, fetched dynamically from the API. [cite: 15]
+- [cite_start]**Track Upload Form**: A dedicated page (`/upload`) with a form to add a new track to the list. [cite: 13, 14]
+- [cite_start]**Mock API Backend**: All data is served from a custom backend built with Next.js API Routes. [cite: 12, 21]
+- [cite_start]**Responsive Design**: The entire application is mobile, tablet, and desktop friendly. [cite: 23, 61]
+- [cite_start]**Session Persistence**: The user's login session is persisted using `localStorage` for a better user experience. [cite: 16]
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack 🛠️
 
-## Learn More
+- [cite_start]**Framework**: Next.js 14 (App Router) [cite: 18]
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- [cite_start]**State Management**: React Hooks (`useState`, `useEffect`) [cite: 19, 22]
+- [cite_start]**Routing**: Next.js File-based Routing (including Dynamic Routes) [cite: 20]
+- **Linting**: ESLint
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Getting Started 🚀
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To get a local copy up and running, follow these simple steps.
 
-## Deploy on Vercel
+### Prerequisites
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Make sure you have Node.js (version 18.x or later) and npm installed on your machine.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Installation & Setup
+
+1. Clone the repository:
+   ```sh
+   git clone [https://github.com/srishti-03/labellift-dashboard.git](https://github.com/srishti-03/labellift-dashboard.git)
+   
+2. Navigate to the project directory:
+   cd your-repo-name
+   
+3. Install NPM packages:
+   npm install
+
+4. Run the development server:
+   npm run dev
+
+   Open http://localhost:3000 with your browser to see the result.
