@@ -6,23 +6,23 @@ This is a mini music distribution dashboard built as a frontend assessment. The 
 
 ## Features Completed ✅
 
-- [cite_start]**Mock Authentication**: A simple, client-side login page to grant access to the dashboard. [cite: 10]
-- [cite_start]**Dashboard Track List**: Displays a list of all music tracks in a clean, responsive table format. [cite: 11]
-- [cite_start]**Dynamic Track Details**: Clicking a track takes the user to a unique page (`/track/[id]`) showing its specific details, fetched dynamically from the API. [cite: 15]
-- [cite_start]**Track Upload Form**: A dedicated page (`/upload`) with a form to add a new track to the list. [cite: 13, 14]
-- [cite_start]**Mock API Backend**: All data is served from a custom backend built with Next.js API Routes. [cite: 12, 21]
-- [cite_start]**Responsive Design**: The entire application is mobile, tablet, and desktop friendly. [cite: 23, 61]
-- [cite_start]**Session Persistence**: The user's login session is persisted using `localStorage` for a better user experience. [cite: 16]
+- **Mock Authentication**: A simple, client-side login page to grant access to the dashboard. [cite: 10]
+- **Dashboard Track List**: Displays a list of all music tracks in a clean, responsive table format. [cite: 11]
+- **Dynamic Track Details**: Clicking a track takes the user to a unique page (`/track/[id]`) showing its specific details, fetched dynamically from the API. 
+- **Track Upload Form**: A dedicated page (`/upload`) with a form to add a new track to the list.
+- **Mock API Backend**: All data is served from a custom backend built with Next.js API Routes.
+- **Responsive Design**: The entire application is mobile, tablet, and desktop friendly. 
+- **Session Persistence**: The user's login session is persisted using `localStorage` for a better user experience. 
 
 ---
 
 ## Tech Stack 🛠️
 
-- [cite_start]**Framework**: Next.js 14 (App Router) [cite: 18]
+- **Framework**: Next.js 14 (App Router) 
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- [cite_start]**State Management**: React Hooks (`useState`, `useEffect`) [cite: 19, 22]
-- [cite_start]**Routing**: Next.js File-based Routing (including Dynamic Routes) [cite: 20]
+- **State Management**: React Hooks (`useState`, `useEffect`) 
+- **Routing**: Next.js File-based Routing (including Dynamic Routes) 
 - **Linting**: ESLint
 
 ---
