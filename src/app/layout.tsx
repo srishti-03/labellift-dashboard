@@ -1,18 +1,7 @@
-// src/app/layout.tsx
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
-import { Providers } from './providers'; // <-- IMPORT our new provider
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: "LabelLift Dashboard",
@@ -25,9 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // 1. The font variable now correctly goes on the <html> tag
-    <html lang="en" className={geistSans.variable} suppressHydrationWarning>
-      {/* 2. The body tag now ONLY has our theme and utility classes */}
+    <html lang="en" className={GeistSans.className} suppressHydrationWarning>
       <body
         className={`antialiased bg-white dark:bg-gray-900 text-black dark:text-gray-200 transition-colors duration-300`}
       >
