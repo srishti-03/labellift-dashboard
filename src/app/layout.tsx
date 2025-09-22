@@ -25,11 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // Make sure there is NO empty line after this tag
-    <html lang="en" suppressHydrationWarning>
-      {/* The <body> tag must come immediately after */}
+    // 1. The font variable now correctly goes on the <html> tag
+    <html lang="en" className={geistSans.variable} suppressHydrationWarning>
+      {/* 2. The body tag now ONLY has our theme and utility classes */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased bg-white dark:bg-gray-900 text-black dark:text-gray-200 transition-colors duration-300`}
       >
         <Providers>
           {children}
