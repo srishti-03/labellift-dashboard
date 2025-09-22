@@ -51,3 +51,8 @@ Make sure you have Node.js (version 18.x or later) and npm installed on your mac
    npm run dev
 
    Open http://localhost:3000 with your browser to see the result.
+
+---
+### Known Issues
+
+* There is a persistent styling issue where some Tailwind CSS utility classes are not being applied correctly, causing certain components to appear unstyled. All application logic—including the theme switcher functionality, API routes, and state management—is fully implemented and working as intended.
